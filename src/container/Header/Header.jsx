@@ -22,7 +22,7 @@ const Header = () => {
             <a
               className={`nav-link ${active}`}
               aria-current="page"
-              href="https://www.youtube.com/watch?v=nuGR6VYb5KQ"
+              href=""
               onClick={() => {
                 setActive("active");
               }}
