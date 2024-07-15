@@ -1,0 +1,52 @@
+.hero-sec {
+  height: 45rem;
+  background: linear-gradient(
+    81deg,
+    #e7f0ff 9.01%,
+    rgba(232, 241, 255, 0.47) 89.11%
+  );
+}
+.hero-img {
+  width: 40rem;
+  height: 45rem;
+  margin-top: 1rem;
+}
+.hero-container-main {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  padding-left: 7rem;
+  padding-right: 6rem;
+}
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.5rem;
+}
+
+.medical {
+  color: black;
+  font-size: 56px;
+  font-weight: 700;
+  margin-right: 15px;
+}
+.centers {
+  color: rgba(42, 168, 255, 1);
+  font-size: 56px;
+  font-weight: 700;
+}
+.heading-skip {
+  color: black;
+  font-weight: 500;
+  font-size: 31px;
+  line-height: 30px;
+}
+.hero-content-connect {
+  font-size: 20px;
+  line-height: 32px;
+  color: rgba(92, 97, 105, 1);
+  font-weight: 400;
+}
+.header-content-button {
+  margin-top: 20px;
+}
