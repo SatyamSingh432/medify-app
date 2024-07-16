@@ -4,7 +4,6 @@ import { useState } from "react";
 import imgNav from "../Img/nav-icon/img.png";
 const Header = () => {
   const [active, setActive] = useState("");
-  console.log(active);
   return (
     <>
       <header className="d-flex align-items-center justify-content-center header text-center ">
