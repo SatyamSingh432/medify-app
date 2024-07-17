@@ -1,8 +1,6 @@
 import "./About.css";
-import img1 from "../Img/AboutUs/doc.png";
-import img2 from "../Img/AboutUs/hosp.png";
-import img3 from "../Img/AboutUs/lab.png";
-import img4 from "../Img/AboutUs/pat.png";
+import img1 from "../Img/AboutUs/ing.png";
+
 const About = () => {
   return (
     <div className="about-cont">
@@ -18,13 +16,8 @@ const About = () => {
           treat all enquiries sensitively and in the strictest confidence.
         </div>
       </div>
-      <div className="about-content-cont1">
+      <div className="about-img">
         <img src={img1} alt="" height={"300px"} />
-        <img src={img2} alt="" height={"300px"} />
-      </div>
-      <div className="about-content-cont2">
-        <img src={img3} alt="" height={"300px"} />
-        <img src={img4} alt="" height={"300px"} />
       </div>
     </div>
   );

@@ -1,19 +1,12 @@
 import "./Patient.css";
 import { FaCheckCircle } from "react-icons/fa";
-import patient1 from "../Img/Patient/image-01-1.png.png";
-import patient2 from "../Img/Patient/image-02-1.png.png";
+import patient1 from "../Img/Patient/Group 1000011062.png";
 const Patient = () => {
   return (
     <div className="patient">
       <div className="patient-cont">
         <div className="patient-img-cont">
-          <div className="patient-img1">
-            <img src={patient1} alt="" />
-          </div>
-
-          <div className="patient-img2">
-            <img src={patient2} alt="" />
-          </div>
+          <img src={patient1} alt="" />
         </div>
         <div className="patient-content-cont">
           <div className="patient-content-head">
@@ -45,7 +38,7 @@ const Patient = () => {
               <li className="list-items">
                 <span>
                   <FaCheckCircle style={{ color: "rgba(42, 167, 255, 1)" }} />
-                </span>{" "}
+                </span>
                 Manage Your Appointments
               </li>
             </ul>

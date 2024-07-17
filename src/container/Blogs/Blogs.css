@@ -31,3 +31,41 @@
   height: 100%;
   width: 100%;
 }
+
+@media (max-width: 900px) {
+  .img-b {
+    height: 18rem;
+  }
+  .img-b img {
+    height: 100%;
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .blogs-img-cont {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .img-b {
+    height: 18rem;
+  }
+  .img-b img {
+    height: 100%;
+    width: 100%;
+  }
+  .blog-heading {
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 55px;
+    align-content: center;
+  }
+  .blogs-cont {
+    gap: 15px;
+    height: 67rem;
+    width: auto;
+    align-items: center;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+  }
+}

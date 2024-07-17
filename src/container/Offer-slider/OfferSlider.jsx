@@ -17,11 +17,33 @@ export default function OfferSlider() {
   return (
     <div className="container-offer-slider">
       <Swiper
-        slidesPerView={3}
+        slidesPerView={2}
         spaceBetween={30}
         freeMode={true}
         pagination={{
           clickable: true,
+        }}
+        breakpoints={{
+          // when window width is >= 0px
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+          },
+          // when window width is >= 768px
+          700: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          // when window width is >= 992px
+          1100: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          // when window width is >= 1200px
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
         }}
         modules={[FreeMode, Pagination]}
         className=" offer-slider"

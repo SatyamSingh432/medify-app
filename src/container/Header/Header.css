@@ -22,3 +22,21 @@
 .active {
   color: rgba(42, 168, 255, 1) !important;
 }
+.car {
+  background-color: white;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  color: aquamarine !important;
+}
+@media (max-width: 900px) {
+  .header {
+    font-size: 14px;
+    height: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}

@@ -14,7 +14,7 @@
 .hero-container-main {
   display: flex;
   justify-content: center;
-  gap: 60px;
+  gap: 1rem;
   padding-left: 7rem;
   padding-right: 6rem;
 }
@@ -49,4 +49,50 @@
 }
 .header-content-button {
   margin-top: 20px;
+}
+@media (max-width: 1150px) {
+  .hero-img {
+    width: 40rem;
+    height: 35rem;
+    margin-top: 1rem;
+  }
+  .hero-img img {
+    width: 100%;
+  }
+  .hero-container-main {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 900px) {
+  .hero-container-main {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .hero-img {
+    width: 20rem;
+    height: 15rem;
+  }
+  .hero-img img {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  .centers {
+    display: block;
+    font-size: 48px;
+  }
+  .medical {
+    font-size: 48px;
+  }
+  .hero-content-heading {
+    gap: 0;
+  }
+  .hero-img {
+    width: 18rem;
+    height: 13rem;
+  }
+  .hero-img img {
+    width: 100%;
+  }
 }

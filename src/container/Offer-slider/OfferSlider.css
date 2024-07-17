@@ -30,6 +30,23 @@
   height: auto; /* maintain aspect ratio */
 }
 .mySwiper {
-  height: 16rem;
-  width: 22rem;
+  height: 15rem;
+  width: 20rem;
+}
+.mySwiper img {
+  width: 100%;
+}
+@media (max-width: 900px) {
+  .mySwiper {
+    height: 15rem;
+    width: 16rem;
+  }
+  .mySwiper img {
+    width: 80%;
+  }
+  .offer-slider {
+    margin-left: 3rem;
+    margin-right: 2rem;
+    padding-top: 2rem;
+  }
 }
