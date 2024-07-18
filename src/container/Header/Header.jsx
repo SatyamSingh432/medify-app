@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import "./Header.css";
 import React, { useState } from "react";
 import imgNav from "../Img/nav-icon/img.png";
@@ -19,10 +20,9 @@ const Navbar = () => {
       <nav className="navbar navbar-expand-lg bg-body-tertiary car">
         <div className="container-fluid ">
           <a className="navbar-brand" href="#">
-            <img src={imgNav} alt="Logo" /> {/* Use your logo image */}
+            <img src={imgNav} alt="Logo" />
           </a>
 
-          {/* Navbar toggler for mobile */}
           <button
             className="navbar-toggler"
             type="button"

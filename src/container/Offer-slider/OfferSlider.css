@@ -32,10 +32,7 @@
   width: 100%; /* or set a specific width, e.g., 200px */
   height: auto; /* maintain aspect ratio */
 }
-.swiper-slide {
-  /* margin-right: 10px !important; */
-  /* margin-left: 10px !important; */
-}
+
 .mySwiper {
   height: 15rem;
   width: 20rem;
