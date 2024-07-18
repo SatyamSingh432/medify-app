@@ -13,33 +13,33 @@ const Faq = () => {
         <div className="faq-list-cont">
           <ul>
             <li className="faq-list">
-              Why choose our medical for your family?{" "}
+              Why choose our medical for your family?
               <span
-                style={{ paddingLeft: "60px", color: "rgba(42, 167, 255, 1)" }}
+                style={{ paddingLeft: "58px", color: "rgba(42, 167, 255, 1)" }}
               >
                 <FaPlus />
               </span>
             </li>
             <li className="faq-list">
-              Why we are different from others?{" "}
+              Why we are different from others?
               <span
-                style={{ paddingLeft: "114px", color: "rgba(42, 167, 255, 1)" }}
+                style={{ paddingLeft: "112px", color: "rgba(42, 167, 255, 1)" }}
               >
                 <FaPlus />
               </span>
             </li>
             <li className="faq-list">
-              Trusted & experience senior care & love{" "}
+              Trusted & experience senior care & love
               <span
-                style={{ paddingLeft: "72px", color: "rgba(42, 167, 255, 1)" }}
+                style={{ paddingLeft: "70px", color: "rgba(42, 167, 255, 1)" }}
               >
                 <FaPlus />
               </span>
             </li>
             <li className="faq-list">
-              How to get appointment for emergency case?{" "}
+              How to get appointment for emergency case?
               <span
-                style={{ paddingLeft: "22px", color: "rgba(42, 167, 255, 1)" }}
+                style={{ paddingLeft: "20px", color: "rgba(42, 167, 255, 1)" }}
               >
                 <FaPlus />
               </span>

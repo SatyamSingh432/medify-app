@@ -87,7 +87,21 @@
 }
 @media (max-width: 550px) {
   .faq-list {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 450;
+  }
+  .faq-list-cont ul {
+    width: 96vw;
+    font-size: 16px;
+    padding-left: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 2rem;
+  }
+  .faq-second-cont {
+    flex-direction: column;
+    width: 96vw;
+    gap: 0.5rem;
   }
 }

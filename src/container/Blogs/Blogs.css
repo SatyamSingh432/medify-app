@@ -62,10 +62,13 @@
   }
   .blogs-cont {
     gap: 15px;
-    height: 67rem;
+    height: 68rem;
     width: auto;
     align-items: center;
     padding-top: 3rem;
     padding-bottom: 2rem;
+  }
+  .blog-heading {
+    align-content: center;
   }
 }

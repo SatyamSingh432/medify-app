@@ -99,3 +99,17 @@
     padding-top: 5px;
   }
 }
+@media (max-width: 500px) {
+  .phone-input-cont {
+    width: 300px; /* Adjust the width as needed */
+  }
+  .phone-input {
+    width: 120px;
+    font-size: 14px;
+  }
+  .country-code {
+    margin-right: 10px;
+    font-size: 14px;
+    color: #333; /* Adjust the color as needed */
+  }
+}
