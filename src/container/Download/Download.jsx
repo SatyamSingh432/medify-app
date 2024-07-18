@@ -1,10 +1,13 @@
 import "./Download.css";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
 import { FaApple } from "react-icons/fa";
+import img1 from "../Img/Download/deef.jpg";
 const Download = () => {
   return (
     <div className="down-cont">
-      <div className="down-img-cont">sdj</div>
+      <div className="down-img-cont">
+        <img src={img1} alt="" />
+      </div>
       <div className="down-content-cont">
         <div className=" down-content-heading">
           Download the <span>Medify</span> App
@@ -38,7 +41,7 @@ const Download = () => {
             style={{
               backgroundColor: "black",
               border: "none",
-              padding: "8px 18px",
+              padding: "8px 22px",
             }}
           >
             <IoLogoGooglePlaystore /> Play Store
@@ -49,7 +52,7 @@ const Download = () => {
             style={{
               backgroundColor: "black",
               border: "none",
-              padding: "8px 18px",
+              padding: "8px 22px",
             }}
           >
             <FaApple /> App Store

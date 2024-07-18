@@ -1,9 +1,9 @@
 .down-cont {
   display: flex;
-  height: 32rem;
+  height: 30rem;
   width: 100%;
   align-items: center;
-  gap: 30px;
+  gap: 2rem;
   justify-content: center;
   background: linear-gradient(
     81deg,
@@ -12,14 +12,21 @@
   );
 }
 .down-img-cont {
-  width: 30rem;
-  height: 24rem;
+  width: 40vw;
+  height: 100%;
+  padding-top: 2rem;
+}
+.down-img-cont img {
+  width: 90%;
+  height: 100%;
 }
 .down-content-cont {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 28rem;
+  width: 40vw;
+  justify-content: center;
+  height: 100%;
 }
 .down-content-heading {
   font-size: 48px;
@@ -28,9 +35,6 @@
   color: rgba(27, 60, 116, 1);
 }
 .down-content-heading span {
-  font-size: 48px;
-  font-weight: 600;
-  line-height: 67px;
   color: rgba(42, 167, 255, 1);
 }
 .down-content-info {
@@ -65,4 +69,33 @@
   display: flex;
   gap: 30px;
   padding-top: 2rem;
+}
+@media (max-width: 900px) {
+  .down-cont {
+    display: flex;
+    flex-direction: column;
+    height: 40rem;
+    gap: 1rem;
+  }
+  .down-img-cont {
+    width: 40vw;
+    height: 100%;
+    padding-top: 2rem;
+  }
+  .down-content-cont {
+    gap: 10px;
+    width: 80vw;
+    justify-content: center;
+    height: 100%;
+  }
+  .down-content-heading {
+    font-size: 42px;
+    font-weight: 600;
+    line-height: 55px;
+    color: rgba(27, 60, 116, 1);
+  }
+  .download-app-btn {
+    gap: 30px;
+    padding-top: 5px;
+  }
 }

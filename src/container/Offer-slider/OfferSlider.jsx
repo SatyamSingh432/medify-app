@@ -7,11 +7,11 @@ import offer2 from "../Img/slider-offer-img/Group 12.png";
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-
+import "swiper/css/autoplay";
 import "./OfferSlider.css";
 
 // import required modules
-import { FreeMode, Pagination } from "swiper/modules";
+import { FreeMode, Pagination, Autoplay } from "swiper/modules";
 
 export default function OfferSlider() {
   return (
@@ -23,6 +23,10 @@ export default function OfferSlider() {
         pagination={{
           clickable: true,
         }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         breakpoints={{
           // when window width is >= 0px
           0: {
@@ -32,20 +36,20 @@ export default function OfferSlider() {
           // when window width is >= 768px
           700: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 30,
           },
           // when window width is >= 992px
           1100: {
             slidesPerView: 2,
-            spaceBetween: 40,
+            spaceBetween: 30,
           },
           // when window width is >= 1200px
           1200: {
             slidesPerView: 3,
-            spaceBetween: 50,
+            spaceBetween: 40,
           },
         }}
-        modules={[FreeMode, Pagination]}
+        modules={[FreeMode, Pagination, Autoplay]}
         className=" offer-slider"
       >
         <SwiperSlide>

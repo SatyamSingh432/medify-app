@@ -2,3 +2,10 @@
   width: 100%;
   height: 40rem;
 }
+.specialist-heading {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 67px;
+  text-align: center;
+  color: rgba(27, 60, 116, 1);
+}

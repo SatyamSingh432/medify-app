@@ -7,8 +7,8 @@ const Faq = () => {
       <div className="faq-tag">Get Your Answer</div>
       <div className="faq-heading">Frequently Asked Questions</div>
       <div className="faq-second-cont">
-        <div className="faq-second-cont">
-          <img src={img1} alt="" height={"450px"} />
+        <div className="faq-img-cont">
+          <img src={img1} alt="" />
         </div>
         <div className="faq-list-cont">
           <ul>
