@@ -1,24 +1,32 @@
 import { useState } from 'react';
+import { BsPatchCheckFill } from 'react-icons/bs';
+
 import SearchHospital from '../SearchHospital/SearchHospital';
 import HospitalCard from '../HospitaalCard/HospitalCard';
 import './HospitalRender.css';
 import img from '../Img/HospitalRen/imgren.png';
 const HospitalRender = () => {
     const [allHospitalData, setAllHospitalData] = useState([]);
+    const [cityName, setCityName] = useState('');
     return (
         <div className='hospital-main'>
             <div className='search-container'>
                 <div className='hospital-render-top' />
 
-                <SearchHospital setAllHospitalData={setAllHospitalData} />
+                <SearchHospital
+                    setAllHospitalData={setAllHospitalData}
+                    setCityName={setCityName}
+                />
             </div>
             <div className='hospital-render-bottom'>
                 <div className='hospital-render-container'>
                     <div className='hospital-render-content'>
-                        <p style={{ fontSize: '24px', fontWeight: '500' }}>
-                            {allHospitalData?.length} medical centers available
-                            in Alaska
-                        </p>
+                        {allHospitalData?.length > 0 && (
+                            <p style={{ fontSize: '24px', fontWeight: '500' }}>
+                                <BsPatchCheckFill /> {allHospitalData?.length}{' '}
+                                medical centers available in {cityName}.
+                            </p>
+                        )}
                         <p
                             style={{
                                 fontSize: '16px',
@@ -35,6 +43,7 @@ const HospitalRender = () => {
                             {allHospitalData.map((data) => {
                                 return (
                                     <HospitalCard
+                                        details={data}
                                         key={data['Hospital Name']}
                                         name={data['Hospital Name']}
                                         city={data.City}

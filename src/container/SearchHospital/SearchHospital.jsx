@@ -6,7 +6,7 @@ import './SearchHospital.css';
 
 import { FaSearch } from 'react-icons/fa';
 
-const SearchHospital = ({ setAllHospitalData }) => {
+const SearchHospital = ({ setAllHospitalData, setCityName }) => {
     const [state, setState] = useState('');
     const [city, setCity] = useState('');
     const [allStates, setAllStates] = useState([]);
@@ -19,6 +19,7 @@ const SearchHospital = ({ setAllHospitalData }) => {
 
     const handleSelectCity = (event) => {
         setCity(event.target.value);
+        setCityName(event.target.value);
     };
 
     useEffect(() => {
