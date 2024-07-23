@@ -29,7 +29,8 @@
   position: fixed;
   top: 0;
   right: 0;
-
+  z-index: 444;
+  height: 100vh;
   color: aquamarine !important;
 }
 @media (max-width: 900px) {
@@ -39,4 +40,10 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+.btn-close {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: black;
 }

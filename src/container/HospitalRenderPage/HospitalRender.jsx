@@ -13,11 +13,19 @@ const HospitalRender = () => {
     <div className="hospital-main">
       <div className="search-container">
         <div className="hospital-render-top" />
-
-        <SearchHospital
-          setAllHospitalData={setAllHospitalData}
-          setCityName={setCityName}
-        />
+        <div
+          style={{
+            position: "absolute",
+            top: "31px",
+            left: "11vw",
+            width: "80%",
+          }}
+        >
+          <SearchHospital
+            setAllHospitalData={setAllHospitalData}
+            setCityName={setCityName}
+          />
+        </div>
       </div>
       <div className="hospital-render-bottom">
         <div className="hospital-render-container">

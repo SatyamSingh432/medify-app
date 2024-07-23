@@ -91,17 +91,6 @@ export default function DaySelector({
           </Box>
         </span>
       </Swiper>
-
-      <Box
-        height={{ xs: "4px", md: "5px" }}
-        width={{ xs: 1, md: "calc(100% - 150px)" }}
-        bgcolor="#F0F0F5"
-        mt="5px"
-        position="absolute"
-        bottom={0}
-        left="50%"
-        sx={{ translate: "-50% 0" }}
-      ></Box>
     </Stack>
   );
 }

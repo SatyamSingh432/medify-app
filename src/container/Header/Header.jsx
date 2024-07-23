@@ -2,12 +2,15 @@
 import "./Header.css";
 import React, { useState } from "react";
 import imgNav from "../Img/nav-icon/img.png";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [active, setActive] = useState(false);
 
   const handleSetActive = () => {
     setActive(!active);
+  };
+  const handleClose = () => {
+    setActive(false);
   };
 
   return (
@@ -19,9 +22,9 @@ const Navbar = () => {
       </header>
       <nav className="navbar navbar-expand-lg bg-body-tertiary car">
         <div className="container-fluid ">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to={"/"}>
             <img src={imgNav} alt="Logo" />
-          </a>
+          </Link>
 
           <button
             className="navbar-toggler"
@@ -32,7 +35,6 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
             onClick={handleSetActive}
-            style={{ zIndex: "999" }} // Toggle active state on button click
           >
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -43,21 +45,35 @@ const Navbar = () => {
             id="navbarNav"
             style={{ justifyContent: "end", paddingRight: "1rem" }}
           >
+            {active && (
+              <button
+                type="button"
+                className="btn-close"
+                aria-label="Close"
+                onClick={handleClose}
+                style={{
+                  position: "absolute",
+                  top: "10px",
+                  right: "10px",
+                  zIndex: "1000",
+                }}
+              ></button>
+            )}
             <ul className="navbar-nav">
               <li className="nav-item">
                 <a
-                  className={`nav-link ${active ? "active" : ""}`}
+                  className={`nav-link `}
                   aria-current="page"
                   href="#"
-                  onClick={handleSetActive} // Toggle active state on link click
+                  // Toggle active state on link click
                 >
                   Find Doctors
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to={"/apoinment"}>
                   Hospitals
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
@@ -83,12 +99,18 @@ const Navbar = () => {
                 <button
                   type="button"
                   className="btn btn-primary"
+                  href="/booking"
                   style={{
                     backgroundColor: "rgba(42, 168, 255, 1)",
                     border: "none",
                   }}
                 >
-                  My Bookings
+                  <Link
+                    to="/booking"
+                    style={{ color: "white", textDecoration: "none" }}
+                  >
+                    My Bookings
+                  </Link>
                 </button>
               </li>
             </ul>

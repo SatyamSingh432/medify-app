@@ -4,6 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import HospitalCard from "../HospitaalCard/HospitalCard";
 import img from "../Img/HospitalRen/imgren.png";
 import TextField from "@mui/material/TextField";
+import "./BookingRender.css";
 const BookingRender = () => {
   const [bData, setBData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
@@ -50,7 +51,7 @@ const BookingRender = () => {
         Bookings
       </div>
       <div
-        className="search-hospital-container"
+        className="search-hospital-container-book"
         style={{ width: "65vw", top: "160px", left: "25vw" }}
       >
         <div className="search-bar">

@@ -1,6 +1,7 @@
 import "./HeroSection.css";
 import heroImg from "../Img/hero-img/img.png";
 import SearchHospitalBox from "../SearchHospitalBox/SearchHospitalBox";
+import { Link } from "react-router-dom";
 const HeroSection = () => {
   return (
     <div className="container-flow hero-sec ">
@@ -28,7 +29,12 @@ const HeroSection = () => {
                 //   boxSizing: "border-box",
               }}
             >
-              Find Centers
+              <Link
+                to={"/apoinment"}
+                style={{ color: "white", textDecoration: "none" }}
+              >
+                Find Centers
+              </Link>
             </button>
           </div>
         </div>
