@@ -1,5 +1,6 @@
 .hero-sec {
   height: 45rem;
+  position: relative;
   background: linear-gradient(
     81deg,
     #e7f0ff 9.01%,
@@ -75,6 +76,11 @@
   }
   .hero-img img {
     width: 100%;
+    display: none;
+  }
+  .hero-sec {
+    height: 70rem;
+    position: relative;
   }
 }
 @media (max-width: 600px) {
@@ -94,5 +100,9 @@
   }
   .hero-img img {
     width: 100%;
+  }
+  .hero-sec {
+    height: 80rem;
+    position: relative;
   }
 }

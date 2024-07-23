@@ -1,67 +1,81 @@
-import { useState } from 'react';
-import { BsPatchCheckFill } from 'react-icons/bs';
+import { useState } from "react";
+import { BsPatchCheckFill } from "react-icons/bs";
 
-import SearchHospital from '../SearchHospital/SearchHospital';
-import HospitalCard from '../HospitaalCard/HospitalCard';
-import './HospitalRender.css';
-import img from '../Img/HospitalRen/imgren.png';
+import SearchHospital from "../SearchHospital/SearchHospital";
+import HospitalCard from "../HospitaalCard/HospitalCard";
+import "./HospitalRender.css";
+import img from "../Img/HospitalRen/imgren.png";
 const HospitalRender = () => {
-    const [allHospitalData, setAllHospitalData] = useState([]);
-    const [cityName, setCityName] = useState('');
-    return (
-        <div className='hospital-main'>
-            <div className='search-container'>
-                <div className='hospital-render-top' />
+  const [allHospitalData, setAllHospitalData] = useState([]);
+  const [cityName, setCityName] = useState("");
+  console.log(allHospitalData);
+  return (
+    <div className="hospital-main">
+      <div className="search-container">
+        <div className="hospital-render-top" />
 
-                <SearchHospital
-                    setAllHospitalData={setAllHospitalData}
-                    setCityName={setCityName}
-                />
+        <SearchHospital
+          setAllHospitalData={setAllHospitalData}
+          setCityName={setCityName}
+        />
+      </div>
+      <div className="hospital-render-bottom">
+        <div className="hospital-render-container">
+          <div className="hospital-render-content">
+            {allHospitalData?.length > 0 && (
+              <p style={{ fontSize: "24px", fontWeight: "500" }}>
+                <BsPatchCheckFill /> {allHospitalData?.length} medical centers
+                available in {cityName}.
+              </p>
+            )}
+            <p
+              style={{
+                fontSize: "16px",
+                fontWeight: "400",
+                color: "rgba(120, 120, 135, 1)",
+              }}
+            >
+              Book appointments with minimum wait-time & verified doctor details
+            </p>
+          </div>
+          <div className="hospital-render-data">
+            {!allHospitalData[0] ? (
+              <div
+                style={{
+                  fontSize: "32px",
+                  fontWeight: "600",
+                  paddingTop: "60px",
+                  width: "60%",
+                  color: "gray",
+                }}
+              >
+                No Hospital found....
+              </div>
+            ) : (
+              <div className="hospital-render-list">
+                {allHospitalData.map((data) => {
+                  return (
+                    <HospitalCard
+                      details={data}
+                      key={data["Hospital Name"]}
+                      name={data["Hospital Name"]}
+                      city={data.City}
+                      state={data.State}
+                      rating={data["Hospital overall rating"]}
+                      type={data["Hospital Type"]}
+                    />
+                  );
+                })}
+              </div>
+            )}
+            <div className="hospital-render-img">
+              <img src={img} alt="" />
             </div>
-            <div className='hospital-render-bottom'>
-                <div className='hospital-render-container'>
-                    <div className='hospital-render-content'>
-                        {allHospitalData?.length > 0 && (
-                            <p style={{ fontSize: '24px', fontWeight: '500' }}>
-                                <BsPatchCheckFill /> {allHospitalData?.length}{' '}
-                                medical centers available in {cityName}.
-                            </p>
-                        )}
-                        <p
-                            style={{
-                                fontSize: '16px',
-                                fontWeight: '400',
-                                color: 'rgba(120, 120, 135, 1)',
-                            }}
-                        >
-                            Book appointments with minimum wait-time & verified
-                            doctor details
-                        </p>
-                    </div>
-                    <div className='hospital-render-data'>
-                        <div className='hospital-render-list'>
-                            {allHospitalData.map((data) => {
-                                return (
-                                    <HospitalCard
-                                        details={data}
-                                        key={data['Hospital Name']}
-                                        name={data['Hospital Name']}
-                                        city={data.City}
-                                        state={data.State}
-                                        rating={data['Hospital overall rating']}
-                                        type={data['Hospital Type']}
-                                    />
-                                );
-                            })}
-                        </div>
-                        <div className='hospital-render-img'>
-                            <img src={img} alt='' />
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 export default HospitalRender;
 

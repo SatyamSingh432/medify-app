@@ -1,6 +1,6 @@
 import "./HeroSection.css";
 import heroImg from "../Img/hero-img/img.png";
-
+import SearchHospitalBox from "../SearchHospitalBox/SearchHospitalBox";
 const HeroSection = () => {
   return (
     <div className="container-flow hero-sec ">
@@ -36,6 +36,7 @@ const HeroSection = () => {
           <img src={heroImg} alt="" />
         </div>
       </div>
+      <SearchHospitalBox />
     </div>
   );
 };

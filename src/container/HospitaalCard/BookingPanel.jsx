@@ -1,30 +1,30 @@
-import DaySelector from './DaySelector/DaySelector';
-import { Box } from '@mui/material';
-import { useState } from 'react';
-import { startOfDay } from 'date-fns';
-import TimeSlotPicker from './TimeSlotPicker/TimeSlotPicker';
+import DaySelector from "./DaySelector/DaySelector";
+import { Box } from "@mui/material";
+import { useState } from "react";
+import { startOfDay } from "date-fns";
+import TimeSlotPicker from "./TimeSlotPicker/TimeSlotPicker";
 
 export default function BookingPanel({ availableSlots, details, makeBooking }) {
-    const [selectedDate, setSelectedDate] = useState(startOfDay(new Date()));
+  const [selectedDate, setSelectedDate] = useState(startOfDay(new Date()));
 
-    const totalSlots =
-        availableSlots.morning.length +
-        availableSlots.afternoon.length +
-        availableSlots.evening.length;
+  const totalSlots =
+    availableSlots.morning.length +
+    availableSlots.afternoon.length +
+    availableSlots.evening.length;
 
-    return (
-        <Box>
-            <DaySelector
-                selectedDate={selectedDate}
-                setSelectedDate={setSelectedDate}
-                totalSlots={totalSlots}
-            />
-            <TimeSlotPicker
-                availableSlots={availableSlots}
-                selectedDate={selectedDate}
-                details={details}
-                handleBooking={makeBooking}
-            />
-        </Box>
-    );
+  return (
+    <Box paddingBottom={"29px"}>
+      <DaySelector
+        selectedDate={selectedDate}
+        setSelectedDate={setSelectedDate}
+        totalSlots={totalSlots}
+      />
+      <TimeSlotPicker
+        availableSlots={availableSlots}
+        selectedDate={selectedDate}
+        details={details}
+        handleBooking={makeBooking}
+      />
+    </Box>
+  );
 }
